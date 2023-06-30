@@ -105,6 +105,10 @@ footer {
     animation: loading 0.75s ease infinite;
 }
 
+.auto-type {
+    word-wrap: break-word;
+}
+
 @keyframes loading {
     from {
         transform: rotate(0turn);
