@@ -18,6 +18,62 @@ body {
     margin-top: 25px;
 }
 
+.debug {
+    border: 1px solid red;
+}
+
+.wave {
+    animation-name: wave-animation;
+    /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s;
+    /* Change to speed up or slow down */
+    animation-iteration-count: infinite;
+    /* Never stop waving :) */
+    transform-origin: 70% 70%;
+    /* Pivot around the bottom-left palm */
+    display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% {
+        transform: rotate(0.0deg)
+    }
+
+    10% {
+        transform: rotate(14.0deg)
+    }
+
+    /* The following five values can be played with to make the waving more or less extreme */
+    20% {
+        transform: rotate(-8.0deg)
+    }
+
+    30% {
+        transform: rotate(14.0deg)
+    }
+
+    40% {
+        transform: rotate(-4.0deg)
+    }
+
+    50% {
+        transform: rotate(10.0deg)
+    }
+
+    60% {
+        transform: rotate(0.0deg)
+    }
+
+    /* Reset for the last half to pause */
+    100% {
+        transform: rotate(0.0deg)
+    }
+}
+
+.bod {
+    margin-top: auto;
+}
+
 iframe {
     width: 500px;
     height: 500px;
@@ -88,6 +144,30 @@ footer {
     justify-content: center;
     align-items: center;
     transition: opacity 0.5s ease, visibility 0.5s ease;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.preloader span {
+    display: inline-block;
+    color: white;
+    font-size: 4rem;
+    animation: load 1s ease-in-out infinite;
+    animation-delay: calc(0.1s*var(--a));
+
+}
+
+@keyframes load {
+    0% {
+        transform: translateY(0);
+    }
+
+    30% {
+        transform: translateY(-40px);
+    }
+
+    60% {
+        transform: translateY(0);
+    }
 }
 
 .loader--hidden {
@@ -116,7 +196,7 @@ footer {
     filter: none;
 }
 
-.preloader::after {
+/* .preloader::after {
     content: "";
     width: 75px;
     height: 75px;
@@ -124,18 +204,28 @@ footer {
     border-top-color: #FFFFFF;
     border-radius: 50%;
     animation: loading 0.75s ease infinite;
-}
+} */
 
 .auto-type {
     word-wrap: break-word;
 }
 
-@keyframes loading {
+/* @keyframes loading {
     from {
         transform: rotate(0turn);
     }
 
     to {
         transform: rotate(1turn);
+    }
+} */
+
+@media only screen and (max-width: 800px) {
+    #pp {
+        margin-left: 0%;
+    }
+
+    #me {
+        width: auto;
     }
 }
