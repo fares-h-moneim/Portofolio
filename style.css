@@ -419,6 +419,10 @@ footer {
         border-left: 0;
         left: -15px;
     }
+
+    a#scroll-btn {
+        opacity: 0;
+    }
 }
 
 a {
