@@ -230,6 +230,9 @@ footer {
     }
 }
 
+
+/* Experience Start */
+
 .timeline {
     position: relative;
     max-width: 1200px;
@@ -322,14 +325,14 @@ footer {
 
 .containerr img {
     position: absolute;
-    width: 40px;
-    right: -20px;
+    width: 60px;
+    right: -30px;
     top: 32px;
     z-index: 10;
 }
 
 .right-container img {
-    left: -20px;
+    left: -30px;
 }
 
 .textbox h2 {
@@ -405,3 +408,10 @@ footer {
         left: -15px;
     }
 }
+
+a {
+    color: white;
+    cursor: pointer;
+}
+
+/* Experience End */
