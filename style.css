@@ -385,6 +385,12 @@ footer {
     left: -15px;
 }
 
+.type_skill {
+    margin-top: 30px;
+    margin-left: 75px;
+}
+
+
 @media screen and (max-width: 600px) {
     .timeline {
         margin: 50px auto;
@@ -426,6 +432,10 @@ footer {
 
     a#scroll-btn {
         opacity: 0;
+    }
+
+    .type_skill {
+        margin-left: 20px;
     }
 }
 
