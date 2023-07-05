@@ -2,6 +2,7 @@ html,
 body {
     max-width: 100%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -270,7 +271,7 @@ footer {
     opacity: 0;
 }
 
-.containerr:nth-child(1) {
+/*.containerr:nth-child(1) {
     animation-delay: 0s;
 }
 
@@ -304,7 +305,7 @@ footer {
         opacity: 1;
         transform: translateY(0px);
     }
-}
+}*/
 
 
 .textbox {
@@ -412,6 +413,76 @@ footer {
 a {
     color: white;
     cursor: pointer;
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.reveal.active {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+/*I want the scroll animation icon to be on the bottom rigth corner of the page*/
+
+a#scroll-btn {
+    position: absolute;
+    height: 3em;
+    width: 1.875em;
+    border: 0.5em solid #ffffff;
+    margin: auto;
+    left: 90%;
+    right: 0;
+    bottom: 6.25em;
+    border-radius: 3em;
+}
+
+a#scroll-btn:before {
+    position: absolute;
+    content: "";
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0.2em;
+    height: 0.4em;
+    width: 0.4em;
+    background-color: #ffffff;
+    border-radius: 50%;
+    animation: move-down 2s infinite;
+}
+
+@keyframes move-down {
+    80% {
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateY(0.5em);
+        opacity: 0;
+    }
+}
+
+a#scroll-btn:after {
+    position: absolute;
+    content: "";
+    width: 12em;
+    display: block;
+    width: 12em;
+    text-align: center;
+    left: -4.2em;
+    bottom: -2.5em;
+    font-size: 1.6em;
+    color: #ffffff;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+.dis {
+    opacity: 0;
 }
 
 /* Experience End */
