@@ -13,6 +13,17 @@ body {
     flex-direction: column;
 }
 
+::-moz-selection {
+    /* Code for Firefox */
+    color: #000;
+    background: #fff;
+}
+
+::selection {
+    color: #000;
+    background: #fff;
+}
+
 
 #mainNavbar .navbar-brand {
     color: #808080;
@@ -250,7 +261,7 @@ footer {
     left: 50%;
     margin-left: -3px;
     z-index: -1;
-    animation: moveline 6s linear forwards;
+    animation: moveline 3s linear forwards;
 }
 
 @keyframes moveline {

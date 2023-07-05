@@ -7,6 +7,9 @@ window.addEventListener('scroll', reveal);
 function reveal() {
     let reveals = document.querySelectorAll('.reveal');
     document.querySelector('#section-1').classList.add('dis');
+    if (window.scrollY == 0) {
+        document.querySelector('#section-1').classList.remove('dis');
+    }
     for (let i = 2; i < reveals.length; i++) {
         let windowHeight = window.innerHeight;
         let revealTop = reveals[i].getBoundingClientRect().top;
