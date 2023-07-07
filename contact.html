@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Contact Me</title>
     <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,28 +59,36 @@
             </div>
         </div>
     </nav>
-
-    <section class="container-fluid px-0 content" id="me">
-        <div class="row align-items-center">
-            <div class="col center">
-                <div class="row">
-                    <div id="hello" class="mt-5 text-left">
-                        <div class="h1" style="color: #808080;">
-                            &#60;Hello World&#62;
+    <div class="container contact-form">
+        <h1 style="color: #808080;">Want to get in contact? <br> Please leave a message below.</h1>
+        <div class="row text-white">
+            <div class="col-6">
+                <form action="">
+                    <div class="half">
+                        <div class="item">
+                            <label for="name">NAME</label>
+                            <input type="text" id="name">
+                        </div>
+                        <div class="item">
+                            <label for="email">EMAIL</label>
+                            <input type="text" id="email">
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div id="heading-group" class="mt-0 text-white text-left">
-                        <h1>Hi, I'm Fares Hesham <br> I'm a <span class="auto-type"></span></h1>
+                    <div class="full">
+                        <label for="message">MESSAGE</label>
+                        <textarea name="" id="message"></textarea>
                     </div>
-                </div>
+                    <div class="action">
+                        <button class="btn btn-light" type="submit">SEND MESSAGE</button>
+                        <button class="btn btn-outline-light" type="reset">RESET</button>
+                    </div>
+                </form>
             </div>
-            <div class="col-lg-6 d-lg-block center d-flex align-items-center justify-content-center mt-5">
-                <img class="img-fluid pp" src="img/PersonalPhoto.png" alt="My Image">
+            <div class="col-6 d-none d-lg-block">
+                <img src="img/code.png" alt="" style="margin-left: 50%;" width="100%">
             </div>
         </div>
-    </section>
+    </div>
     <footer class="text-white text-center text-lg-start">
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
@@ -115,15 +123,6 @@
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-
-    <script>
-        var typed = new Typed(".auto-type", {
-            strings: ["Computer Engineer", "Web Developer", "Data Scientist"],
-            typeSpeed: 50,
-            backSpeed: 70,
-            loop: true
-        })
-    </script>
     <script src="app.js"></script>
 </body>
 
