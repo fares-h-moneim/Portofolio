@@ -12,6 +12,29 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/10f644498c.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('kGAeRG04LmNxQNUZW');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_l9n7l5u', 'template_coqzo3k', this)
+                    .then(function () {
+                        console.log('SUCCESS!');
+                    }, function (error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 </head>
 
 <body>
@@ -63,7 +86,7 @@
         <h1 style="color: #808080;">Want to get in contact? <br> Please leave a message below.</h1>
         <div class="row text-white">
             <div class="col-6">
-                <form action="https://formsubmit.co/fares.h.moneim@gmail.com" method="POST">
+                <form id="contact-form" method="POST">
                     <div class="half">
                         <div class="item">
                             <label for="name">NAME</label>
