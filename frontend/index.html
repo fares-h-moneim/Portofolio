@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EXPERIENCE</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +26,7 @@
         <span style="--a:7">.</span>
         <span style="--a:8">.</span>
     </div>
-    <nav class="navbar navbar-expand-md bg-body-dark" id="mainNavbar">
+    <nav class="navbar navbar-expand-lg bg-body-dark" id="mainNavbar">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
                 <img src="img/logo.png" width="75" height="45.15">
@@ -60,74 +60,31 @@
             </div>
         </div>
     </nav>
-    <section id="section-1">
-        <a id="scroll-btn" href="#section-2"></a>
+
+    <section class="container-fluid px-0 content" id="me">
+        <div class="row align-items-center">
+            <div class="col center">
+                <div class="row">
+                    <div id="hello" class="mt-5 text-left">
+                        <div class="h1" style="color: #808080;">
+                            &#60;Hello World&#62;
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="heading-group" class="mt-0 text-white text-left">
+                        <h1>Hi, I'm Fares Hesham <br> I'm a <span class="auto-type"></span></h1>
+                    </div>
+                </div>
+                <div class="row" id="counter">
+                    <p>This page has been viewed <a id="counter"></a> times</p>
+                </div>
+            </div>
+            <div class="col-lg-6 d-lg-block center d-flex align-items-center justify-content-center mt-5">
+                <img class="img-fluid pp" src="img/PersonalPhoto.png" alt="My Image">
+            </div>
+        </div>
     </section>
-    <div class="timeline">
-        <div class="containerr left-container reveal active">
-            <img src="img/ACT.png" alt="Banque Misr Logo">
-            <div class="textbox text-white">
-                <h2>Cloud Engineer Intern at <a href="https://www.linkedin.com/company/advanced-computer-technology/"
-                        target="_blank">Advanced Computer Technology</a></h2>
-                <small>July 2023 - Present</small>
-                <p>I am in the team who makes the process of installation and configuration for systems like vmware,
-                    veam, linux, AWS and cloud.</p>
-
-                <span class="right-arrow"></span>
-            </div>
-        </div>
-        <div class="containerr right-container reveal active" id="section-2">
-            <img src="img/Banque_Misr.png" alt="Banque Misr Logo">
-            <div class="textbox text-white">
-                <h2>Data Scientist at <a href="https://www.linkedin.com/company/banque-misr/" target="_blank">Banque
-                        Misr Digital Factory</a></h2>
-                <small>August 2022 - October 2022</small>
-                <p>Coordinated a team of 10 members to deploy machine learning models for BMonline app, resulting in
-                    a feature that located ATM machines & branches near the user. After the internship I got offered a
-                    part time position.</p>
-                <span class="left-arrow"></span>
-            </div>
-        </div>
-        <div class="containerr left-container reveal">
-            <img src="img/Etisalat_Logo.png" alt="Etisalat by e& Logo">
-            <div class="textbox text-white">
-                <h2>Technology Intern at <a href="https://www.linkedin.com/company/etisalat-egypt/"
-                        target="_blank">Etisalat by e&</a></h2>
-                <small>July 2022 - August 2022</small>
-                <p>Attended 25+ technical sessions to develop expertise in software engineering & crafting solutions;
-                    ranked 1st in over 100 participants for the social media competition. Eventually I got featured in
-                    their advertisment for the upcoming internship! <a
-                        href="https://www.linkedin.com/posts/etisalat-egypt_thebestoperatorinegypt-makepossible-momentsthatmatter-activity-7038549450776064001-rUmS?utm_source=share&utm_medium=member_desktop"
-                        target="_blank">Click
-                        Here to check it out!</a>
-                </p>
-
-
-                <span class="right-arrow"></span>
-            </div>
-        </div>
-        <div class="containerr right-container reveal">
-            <img src="img/CUFE.png" alt="Cairo University Faculty of Engineering Logo">
-            <div class="textbox text-white">
-                <h2>Class Representative at Cairo University Faculty of Engineering</h2>
-                <small>September 2020 - Present</small>
-                <p>Responsible for being a channel between students and the professors, resolving conflicts between
-                    students and organizing events among colleagues.
-                </p>
-                <span class="left-arrow"></span>
-            </div>
-        </div>
-        <div class="containerr left-container reveal">
-            <img src="img/MRCU_Logo.png" alt="Momentum Robotics Cairo University Logo">
-            <div class="textbox text-white">
-                <h2>Head of Software Development Team at Momentum Robotics Cairo University</h2>
-                <small>October 2022 - Present</small>
-                <p>Leading a team of 20 students to develop software for robots and compete in international
-                    competitions.</p>
-                <span class="right-arrow"></span>
-            </div>
-        </div>
-    </div>
     <footer class="text-white text-center text-lg-start">
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
@@ -162,9 +119,16 @@
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.0.js"
-        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
-    <script src="experience.js"></script>
+
+    <script>
+        var typed = new Typed(".auto-type", {
+            strings: ["Computer Engineer", "Web Developer", "Data Scientist"],
+            typeSpeed: 50,
+            backSpeed: 70,
+            loop: true
+        })
+    </script>
+    <script src="app.js"></script>
 </body>
 
 </html>
